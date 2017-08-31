@@ -9,13 +9,17 @@ var bio = {
         },
         "welcomeMessage": "Welcome to my Udacity online resume!",
         "skills": ["HTML/CSS", "Javascript", "Angular 4", "Website Design"],
-        "biopic": "http://elize.website",
+        "bioPic": "images/fry.jpg",
         display: function() {
-            $("#header").append(HTMLheaderName.replace("%data%", bio.name));
-            $("#header").append(HTMLheaderRole.replace("%data%", bio.role));
+            $("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+            $("#topContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
+            $("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
+            $("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
+            $("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
+            $("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
+            $("#header").append(HTMLbioPic.replace("%data%", bio.bioPic));
         }
 }
-
 bio.display();
 
 var education = {
