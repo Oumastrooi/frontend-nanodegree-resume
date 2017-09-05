@@ -21,10 +21,10 @@ var bio = {
             $("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
             $("#header").append(HTMLskillsStart);
             bio.skills.forEach(function(skill){
-                $('#skills').append(HTMLskills.replace("%data%", skill))
+                $('#skills').append(HTMLskills.replace("%data%", skill));
             });
         }
-}
+};
 
 bio.display();
 
@@ -58,7 +58,7 @@ var work = {
             $('.work-entry:last').append(formattedJob);
         });
     }
-}
+};
 
 work.display();
 
@@ -118,7 +118,7 @@ var projects = {
             $('.project-entry:last').append(formattedProject);
         });
     }
-}
+};
 
 projects.display();
 
@@ -178,6 +178,6 @@ var education = {
 
 
     }
-}
+};
 
 education.display();
